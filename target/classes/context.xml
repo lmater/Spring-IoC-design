@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="command" class="com.org.ma.command.impl.ComandImpl">
+		<property name="nimporte" value="10"></property>
+
+		<property name="stock" ref="stock"></property>
+
+	</bean>
+	<!-- <bean id="stock" class="com.org.ma.stock.impl.Stockimpl"></bean> -->
+
+	<bean id="stock" class="com.org.ma.stock.mock.StockMock"></bean>
+</beans>
